@@ -1,0 +1,30 @@
+<center>
+    <h1>Expense Details</h1>
+</center>
+
+
+<table align="center" cellpadding="10px" cellspacing="10px" border="2">
+    <tr>
+        <th>Id</th>
+        <th>Expense</th>
+        <th>Expense Type</th>
+        <th>Date</th>
+        <th>Description</th>
+        <th>User</th>
+        <th colspan="2">Action</th>
+    </tr>
+
+    {% for i in el %}
+    <tr>
+        <td>{{i.id}}</td>
+        <td>{{i.expense}}</td>
+        <td>{{i.expensetype}}</td>
+        <td>{{i.expenseDate}}</td>
+        <td>{{i.description}}</td>
+        <td>{{i.user}}</td>
+        <td><a href="expenseEdit?id={{i.id}}">Edit</a></td>
+        <td><a href="expenseDelete?id={{i.id}}">Delete</a></td>
+
+    </tr>
+    {% endfor %}
+</table>

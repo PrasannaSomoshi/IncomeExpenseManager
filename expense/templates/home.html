@@ -1,0 +1,29 @@
+<center>
+    <h1 style="color:green;"><u>Daily Expense App</u></h1>
+    {% if user.is_authenticated %}
+    <h1 style="color:green;">Welcome {{user}}!</h1>
+    {% endif %}
+    <h2><a href="">Home</a></h2>
+</center>
+
+
+
+{% if user.is_authenticated %}
+
+<center>
+
+    <h2><a href="">Edit Profile</a></h2>
+    <h2><a href="addIncome">Add Income</a></h2>
+    <h2><a href="incomeList">Income List</a></h2>
+    <h2><a href="addExpense">Add Expense</a></h2>
+    <h2><a href="expenseList">Expense List</a></h2>
+    <h2><a href="logout">Log out</a></h2>
+</center>
+
+{% else %}
+<center>
+    <h2><a href="addUser">Register</a></h2>
+    <!-- <h2><a href="flogin">Form Log in</a></h2> -->
+    <h2><a href="login">Log in</a></h2>
+</center>
+{% endif %}

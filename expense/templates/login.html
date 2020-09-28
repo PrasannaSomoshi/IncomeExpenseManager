@@ -1,0 +1,32 @@
+{% if message is not None %}
+<center>
+    <h3><span style="color: red;">{{message}}</span></h3>
+</center>
+{% endif %}
+
+<center>
+    <h1>Log In</h1>
+</center>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    <table align="center" cellpadding="10" cellspacing="10" border="6">
+        <tr>
+            <td>Username</td>
+            <td><input type="text" name="uname"></td>
+        </tr>
+
+        <tr>
+            <td>Password</td>
+            <td><input type="password" name="pwd"></td>
+        </tr>
+
+        <tr>
+            <td><input type="submit" value="Log in"></td>
+        </tr>
+
+
+
+    </table>
+
+</form>

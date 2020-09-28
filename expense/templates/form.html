@@ -1,0 +1,19 @@
+<center>
+    <h1 style="color:green;">{{message}}</h1>
+    <form action="" method="POST">
+
+        {% csrf_token %}
+
+        <table cellpadding="10" cellspacing="10" border="1">
+            {{form.as_table}}
+
+            <tr>
+                <td>
+                    <input type="submit" value="Submit">
+                <td><input type="reset" value="Reset"></td>
+                </td>
+            </tr>
+        </table>
+
+    </form>
+</center>

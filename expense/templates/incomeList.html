@@ -1,0 +1,29 @@
+<center>
+    <h1>Income Details</h1>
+</center>
+
+<table align="center" cellpadding="10px" cellspacing="10px" border="2">
+    <tr>
+        <th>Id</th>
+        <th>Income</th>
+        <th>Income Type</th>
+        <th>Date</th>
+        <th>Description</th>
+        <th>User</th>
+        <th colspan="2">Action</th>
+    </tr>
+
+    {% for i in il %}
+    <tr>
+        <td>{{i.id}}</td>
+        <td>{{i.income}}</td>
+        <td>{{i.incometype}}</td>
+        <td>{{i.incomeDate}}</td>
+        <td>{{i.description}}</td>
+        <td>{{i.user}}</td>
+        <td><a href="incomeEdit?id={{i.id}}">Edit</a></td>
+        <td><a href="incomeDelete?id={{i.id}}">Delete</a></td>
+
+    </tr>
+    {% endfor %}
+</table>
