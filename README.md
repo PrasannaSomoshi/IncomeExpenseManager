@@ -1,4 +1,4 @@
-# IncomeExpenseManager
+# IncomeExpenseManager (Django)
 
 This is a web application built using Django. <br>
 Users can register themselves with sign up & log in with proper authentication. <br>
